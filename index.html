@@ -820,12 +820,6 @@
         if (matchSubject && matchAge) {
           card.style.display = '';
           card.style.opacity = '1';
-          card.style.order = '0';
-        } else if (matchSubject && !matchAge) {
-          // Show but dimmed for non-matching age
-          card.style.display = '';
-          card.style.opacity = '0.5';
-          card.style.order = '1';
         } else {
           card.style.display = 'none';
         }
@@ -834,11 +828,7 @@
 
     function ageMatches(cardAge, selectedAge) {
       if (selectedAge === 'all') return true;
-      if (selectedAge === 'baby') return cardAge === 'baby';
-      if (selectedAge === 'toddler') return cardAge === 'baby' || cardAge === 'toddler';
-      if (selectedAge === 'kid') return cardAge === 'baby' || cardAge === 'toddler' || cardAge === 'kid';
-      if (selectedAge === 'adult') return cardAge === 'kid' || cardAge === 'adult';
-      return true;
+      return cardAge === selectedAge;
     }
 
     function updateAgeButton(age) {
