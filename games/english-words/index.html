@@ -1116,6 +1116,12 @@
         item.onclick = () => speakEnglish(r.word.english);
         list.appendChild(item);
       });
+
+      geroShare('#endScreen', {
+        gameTitle: 'えいごでGO!',
+        resultText: 'ランク' + title,
+        age: 'kid'
+      });
     }
 
     // ===== RETRY & HOME =====
@@ -1128,5 +1134,6 @@
       showScreen('startScreen');
     }
   </script>
+<script src="../../js/share-gate.js"></script>
 </body>
 </html>

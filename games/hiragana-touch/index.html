@@ -1072,6 +1072,12 @@
             window.speechSynthesis.speak(utter);
           } catch(e) {}
         }
+
+        geroShare('#endScreen', {
+          gameTitle: 'ひらがなタッチ',
+          resultText: score + 'もん せいかい',
+          age: 'kid'
+        });
       }, 500);
     }
 
@@ -1094,5 +1100,6 @@
       return arr;
     }
   </script>
+<script src="../../js/share-gate.js"></script>
 </body>
 </html>

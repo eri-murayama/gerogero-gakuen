@@ -1394,6 +1394,12 @@
       const factQ = questionPool[Math.floor(Math.random() * questionPool.length)];
       document.getElementById('fact-text').innerHTML =
         `<strong>「${factQ.kanji}」（${factQ.correct}）</strong><br>${factQ.fact}`;
+
+      geroShare('#result-screen', {
+        gameTitle: '難読漢字チャレンジ',
+        resultText: rank,
+        age: 'adult'
+      });
     }
 
     /* ==============================
@@ -1412,5 +1418,6 @@
     initBgPattern();
   })();
   </script>
+<script src="../../js/share-gate.js"></script>
 </body>
 </html>

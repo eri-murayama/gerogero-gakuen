@@ -876,6 +876,11 @@
       }
 
       showScreen(resultScreen);
+      geroShare('#result-screen', {
+        gameTitle: 'きおくカード',
+        resultText: stars + 'つぼし',
+        age: 'toddler'
+      });
       launchConfetti();
     }
 
@@ -969,5 +974,6 @@
       canvas.height = window.innerHeight;
     });
   </script>
+<script src="../../js/share-gate.js"></script>
 </body>
 </html>

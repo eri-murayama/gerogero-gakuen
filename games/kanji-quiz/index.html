@@ -907,6 +907,12 @@
         sfxCelebration();
         spawnConfetti();
       }
+
+      geroShare('#resultScreen', {
+        gameTitle: '漢字クイズ',
+        resultText: 'ランク' + rank,
+        age: 'kid'
+      });
     }
 
     /* ===================================================
@@ -947,5 +953,6 @@
     showScreen(titleScreen);
   })();
   </script>
+<script src="../../js/share-gate.js"></script>
 </body>
 </html>

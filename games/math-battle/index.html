@@ -1395,6 +1395,11 @@ function endGame(won) {
   document.getElementById('result-message').textContent = message;
 
   showScreen('result-screen');
+  geroShare('#result-screen', {
+    gameTitle: 'さんすうバトル',
+    resultText: title,
+    age: 'kid'
+  });
 
   // Victory particles
   if (won) {
@@ -1408,5 +1413,6 @@ function endGame(won) {
 initStars();
 </script>
 
+<script src="../../js/share-gate.js"></script>
 </body>
 </html>

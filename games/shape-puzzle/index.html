@@ -1274,6 +1274,12 @@
       $('#resultScore').textContent = state.score + ' てん';
       $('#resultDetail').textContent =
         state.totalRounds + 'もんちゅう ' + state.correct + 'もんせいかい！';
+
+      geroShare('#resultScreen', {
+        gameTitle: 'かたちパズル',
+        resultText: stars + 'つぼし',
+        age: 'toddler'
+      });
     }
 
     // ===== Event Listeners =====
@@ -1291,5 +1297,6 @@
       showScreen('start');
     });
   </script>
+<script src="../../js/share-gate.js"></script>
 </body>
 </html>

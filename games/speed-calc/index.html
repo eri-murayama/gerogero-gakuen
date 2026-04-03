@@ -1163,6 +1163,12 @@ function endGame() {
   rankEl.className = `rank-display ${rankClass}`;
 
   setTimeout(() => showScreen('resultScreen'), 300);
+
+  geroShare('#resultScreen', {
+    gameTitle: '脳トレ計算',
+    resultText: 'ランク' + rank,
+    age: 'adult'
+  });
 }
 
 // ===== Replay =====
@@ -1184,5 +1190,6 @@ function showScreen(id) {
 initParticles();
 selectDiff('normal');
 </script>
+<script src="../../js/share-gate.js"></script>
 </body>
 </html>

@@ -1112,6 +1112,12 @@ function endGame() {
       <span class="${r.correct ? 'breakdown-correct' : 'breakdown-wrong'}">${r.correct ? '⭕' : '❌'}</span>`;
     bd.appendChild(row);
   });
+
+  geroShare('#screen-result', {
+    gameTitle: '都道府県マスター',
+    resultText: 'ランク' + rank,
+    age: 'kid'
+  });
 }
 
 // ── Start game ─────────────────────────────────────────────────────────
@@ -1151,5 +1157,6 @@ document.addEventListener('touchstart', () => {
   try { if (audioCtx) audioCtx.resume(); } catch(e){}
 }, { once: true, passive: true });
 </script>
+<script src="../../js/share-gate.js"></script>
 </body>
 </html>
